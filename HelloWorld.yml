@@ -1,0 +1,5 @@
+- name: Simple Shell Example
+  hosts: all
+  tasks:
+    - name: Echo a message
+      ansible.builtin.shell: echo "Hello World"
