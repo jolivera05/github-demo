@@ -1,0 +1,14 @@
+---
+- name: Run a simple shell command on remote hosts
+  hosts: all
+  become: yes  # Run with sudo privileges if needed
+  gather_facts: no
+
+  tasks:
+    - name: Check disk usage
+      ansible.builtin.shell: "df -h /"
+      register: disk_usage   # Store the output in a variable
+
+    - name: Display disk usage result
+      ansible.builtin.debug:
+        msg: "{{ disk_usage.stdout }}"
