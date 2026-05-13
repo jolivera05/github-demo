@@ -2,4 +2,4 @@
   tasks:
   - name: debug
     debug:
-      msg: "Playbook from Github"
+      msg: "Playbook from prueba"
