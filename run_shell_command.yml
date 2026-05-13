@@ -1,7 +1,7 @@
 ---
 - name: Run a simple shell command on remote hosts
   hosts: all
-  become: yes  # Run with sudo privileges if needed
+  become: no # Run with sudo privileges if needed
   gather_facts: no
 
   tasks:
