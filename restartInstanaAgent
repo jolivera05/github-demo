@@ -1,0 +1,11 @@
+---
+- name: Run Remote Script
+  hosts: all
+  tasks:
+    - name: Execute script.sh
+      ansible.builtin.shell: /opt/scripts/script.sh
+      register: script_output
+
+    - name: Show output
+      ansible.builtin.debug:
+        var: script_output.stdout
