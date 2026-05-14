@@ -2,4 +2,5 @@
   hosts: all
   tasks:
     - name: Echo a message
-      ansible.builtin.shell: echo "Hello World"
+      ansible.builtin.debug:
+        msg: "Hello World"   
