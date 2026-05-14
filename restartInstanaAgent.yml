@@ -2,10 +2,10 @@
 - name: RestartInstanaAgent
   hosts: all
   tasks:
-    - name: restart Instana-Agent
+    - name: validate Instana-Agent
       ansible.builtin.service:
         name: instana-agent
-        state: restarted        
-      become: true
+        state: started        
+      become: yes
       
     
