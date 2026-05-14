@@ -2,9 +2,16 @@
 - name: RestartInstanaAgent
   hosts: all
   tasks:
-    - name: Execute shell
+    - name: restart Instana-Agent
+      ansible.builtin.systemd_service:
+        name: instana-agent
+        state: restarted
+        daemon_reload: true
+      become: true
+      
+    - name: Register shell  
       ansible.builtin.shell: |
-        sudo systemctl restart --quiet instana-agent
+        ls -ls
         echo "Instana Agent restarted via systemd."
       register: shell_output
 
