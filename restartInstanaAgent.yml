@@ -4,7 +4,7 @@
   tasks:
     - name: Execute shell
       ansible.builtin.shell: |
-        sudo systemctl restart instana-agent
+        sudo systemctl restart --quiet instana-agent
         echo "Instana Agent restarted via systemd."
       register: shell_output
 
