@@ -1,5 +1,5 @@
 ---
-- name: Run Remote Script
+- name: RestartInstanaAgent
   hosts: all
   tasks:
     - name: Execute script.sh
