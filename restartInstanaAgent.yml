@@ -9,13 +9,4 @@
         daemon_reload: true
       become: true
       
-    - name: Register shell  
-      ansible.builtin.shell: |
-        ls -ls
-        echo "Instana Agent restarted via systemd."
-      become: true
-      register: shell_output
-
-    - name: Show output
-      ansible.builtin.debug:
-        var: shell_output.stdout
+    
