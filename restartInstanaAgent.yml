@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: Execute script.sh
-      ansible.builtin.shell: /opt/scripts/script.sh
+      ansible.builtin.shell: /bin/sh /opt/scripts/script.sh
       register: script_output
 
     - name: Show output
